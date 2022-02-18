@@ -1,13 +1,14 @@
 const box = document.querySelector('.box');
 box.addEventListener('click', function () {
-  //   let satu = 'size';
-  //   let dua = 'caption';
+  let satu = 'size';
+  let dua = 'caption';
 
-  //   if (this.dua.contains(satu)) {
-  //     [satu, dua] = [dua, satu];
-  //   }
+  if (this.classList.contains(satu)) {
+    [satu, dua] = [dua, satu];
+  }
 
   this.classList.toggle('size');
+  //gunakan arrow function agar tidak housting atau mengambil this window
   setTimeout(() => {
     this.classList.toggle('caption');
   }, 600);
